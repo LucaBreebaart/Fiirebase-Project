@@ -69,8 +69,8 @@ export default function TestScreen() {
                 </View>
 
                 <View style={styles.TopCourseContainer}>
+                    <TouchableOpacity style={styles.courseContainerSmall} onPress={() => navigation.navigate('CourseScreen')}>
 
-                    <View style={styles.courseContainerSmall}>
                         <View>
                             <Text style={styles.TopCourseText}>Maketing</Text>
                             <Text style={styles.TopCourseSubText}>14 Courses</Text>
@@ -79,11 +79,11 @@ export default function TestScreen() {
                             style={styles.TopCourseImage}
                             source={require('../assets/search.png')}
                         />
-                    </View>
 
+                    </TouchableOpacity>
                     <View style={[styles.courseContainerSmall, styles.two]}>
                         <View>
-                            <Text style={styles.TopCourseText}>Maketing</Text>
+                            <Text style={styles.TopCourseText}>Design</Text>
                             <Text style={styles.TopCourseSubText}>14 Courses</Text>
                         </View>
                         <Image
@@ -94,7 +94,7 @@ export default function TestScreen() {
 
                     <View style={[styles.courseContainerSmall, styles.three]}>
                         <View>
-                            <Text style={styles.TopCourseText}>Maketing</Text>
+                            <Text style={styles.TopCourseText}>Data Science</Text>
                             <Text style={styles.TopCourseSubText}>14 Courses</Text>
                         </View>
                         <Image
@@ -103,10 +103,9 @@ export default function TestScreen() {
                         />
                     </View>
 
-                    
                     <View style={[styles.courseContainerSmall, styles.four]}>
                         <View>
-                            <Text style={styles.TopCourseText}>Maketing</Text>
+                            <Text style={styles.TopCourseText}>UX</Text>
                             <Text style={styles.TopCourseSubText}>14 Courses</Text>
                         </View>
                         <Image
@@ -146,7 +145,7 @@ const styles = StyleSheet.create({
         fontSize: 28,
         fontWeight: '600'
     },
-    headertext:{
+    headertext: {
         fontSize: 26,
         fontWeight: '600'
     },
@@ -243,7 +242,7 @@ const styles = StyleSheet.create({
         rowGap: 20,
     },
     courseContainerSmall: {
-        width: '46%',
+        width: '47%',
         height: 300,
         borderRadius: 20,
         backgroundColor: '#FEBDDD',
