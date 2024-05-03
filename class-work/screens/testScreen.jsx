@@ -7,11 +7,11 @@ export default function TestScreen() {
             <View style={styles.container}>
 
                 <View style={styles.header}>
-                    <Text style={styles.headertext}>Hello Ethan</Text>
+                    <Text style={styles.headertext}>Hello Ehan</Text>
                     <Image
                         style={styles.profile}
                         source={{
-                            url: 'https://images.unsplash.com/photo-1714385998351-341d070aa79e?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                            url: 'https://cdn.dribbble.com/userupload/14018379/file/original-7af4c40cab2f02316ef19861bcfc153b.jpg?resize=1024x768'
                         }}
                     />
                 </View>
@@ -71,46 +71,54 @@ export default function TestScreen() {
                 <View style={styles.TopCourseContainer}>
                     <TouchableOpacity style={styles.courseContainerSmall} onPress={() => navigation.navigate('CourseScreen')}>
 
-                        <View>
+                        <View style={styles.TopCourseTextContainer}>
                             <Text style={styles.TopCourseText}>Maketing</Text>
                             <Text style={styles.TopCourseSubText}>14 Courses</Text>
                         </View>
                         <Image
-                            style={styles.TopCourseImage}
-                            source={require('../assets/search.png')}
+                            style={styles.courseImage}
+                            source={{
+                                url: 'https://kuo-experience.com/wp-content/uploads/2020/07/experiencia-01.png'
+                            }}
                         />
-
                     </TouchableOpacity>
+
                     <View style={[styles.courseContainerSmall, styles.two]}>
-                        <View>
+                        <View style={styles.TopCourseTextContainer}>
                             <Text style={styles.TopCourseText}>Design</Text>
                             <Text style={styles.TopCourseSubText}>14 Courses</Text>
                         </View>
                         <Image
-                            style={styles.TopCourseImage}
-                            source={require('../assets/search.png')}
+                            style={styles.courseImage}
+                            source={{
+                                url: 'https://kuo-experience.com/wp-content/uploads/2020/07/producto-01.png'
+                            }}
                         />
                     </View>
 
                     <View style={[styles.courseContainerSmall, styles.three]}>
-                        <View>
+                        <View style={styles.TopCourseTextContainer}>
                             <Text style={styles.TopCourseText}>Data Science</Text>
                             <Text style={styles.TopCourseSubText}>14 Courses</Text>
                         </View>
                         <Image
-                            style={styles.TopCourseImage}
-                            source={require('../assets/search.png')}
+                            style={styles.courseImage}
+                            source={{
+                                url: 'https://kuo-experience.com/wp-content/uploads/2020/07/comunicacion-01.png'
+                            }}
                         />
                     </View>
 
                     <View style={[styles.courseContainerSmall, styles.four]}>
-                        <View>
+                        <View style={styles.TopCourseTextContainer}>
                             <Text style={styles.TopCourseText}>UX</Text>
                             <Text style={styles.TopCourseSubText}>14 Courses</Text>
                         </View>
                         <Image
-                            style={styles.TopCourseImage}
-                            source={require('../assets/search.png')}
+                            style={styles.courseImage}
+                            source={{
+                                url: 'https://kuo-experience.com/wp-content/uploads/2020/07/Identidad.png'
+                            }}
                         />
                     </View>
 
@@ -241,16 +249,20 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         rowGap: 20,
     },
+    TopCourseTextContainer: {
+        padding: 14,
+    },
     courseContainerSmall: {
         width: '47%',
         height: 300,
         borderRadius: 20,
         backgroundColor: '#FEBDDD',
-        padding: 14,
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
         flexDirection: 'column',
+        position: 'relative',
+        overflow: 'hidden'
     },
     two: {
         backgroundColor: '#8A9AFC',
@@ -275,6 +287,15 @@ const styles = StyleSheet.create({
     TopCourseImage: {
         width: '100%',
         height: 'auto',
+    },
+    courseImage: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        width: '100%',
+        height: '50%',
     }
+
 
 });

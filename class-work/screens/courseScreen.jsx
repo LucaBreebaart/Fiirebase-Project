@@ -20,7 +20,7 @@ export default function CourseScreen() {
                 </View>
                 <TouchableOpacity style={styles.startCourseButton}>
                     <View style={styles.ButtonText}>
-                        <Text style={styles.textSmall}>Start a Course</Text>
+                        <Text style={styles.textSmall2}>Start a Course</Text>
                     </View>
                     <View style={styles.play}>
                         <Image
@@ -29,6 +29,12 @@ export default function CourseScreen() {
                         />
                     </View>
                 </TouchableOpacity>
+                <Image
+                    style={styles.headerimage}
+                    source={{
+                        url: 'https://kuo-experience.com/wp-content/uploads/2020/07/experiencia-01.png'
+                    }}
+                />
             </View>
 
             <View style={styles.container}>
@@ -41,19 +47,81 @@ export default function CourseScreen() {
                         <Text style={styles.CourseNumber}>01</Text>
                         <View style={styles.CourseTextContainer}>
                             <Text style={styles.textSmall}>Introduction</Text>
-                            <Text style={styles.textSmall}>This is a course tha...</Text>
+                            <Text style={styles.textSmall2}>This is a course tha...</Text>
                         </View>
-                        <View style={styles.play}>
+                        <View style={styles.play2}>
                             <Image
                                 style={styles.icon}
-                                source={require('../assets/play.png')}
+                                source={require('../assets/play-course.png')}
                             />
                         </View>
                     </View>
+
+                    <View style={styles.CoursesDetails}>
+                        <Text style={styles.CourseNumber}>02</Text>
+                        <View style={styles.CourseTextContainer}>
+                            <Text style={styles.textSmall}>Chaptor One</Text>
+                            <Text style={styles.textSmall2}>This is a course tha...</Text>
+                        </View>
+                        <View style={styles.play2}>
+                            <Image
+                                style={styles.icon}
+                                source={require('../assets/play-course.png')}
+                            />
+                        </View>
+                    </View>
+
+                    <View style={styles.CoursesDetails}>
+                        <Text style={styles.CourseNumber}>03</Text>
+                        <View style={styles.CourseTextContainer}>
+                            <Text style={styles.textSmall}>Chaptor Two</Text>
+                            <Text style={styles.textSmall2}>This is a course tha...</Text>
+                        </View>
+                        <View style={styles.play2}>
+                            <Image
+                                style={styles.icon}
+                                source={require('../assets/play-course.png')}
+                            />
+                        </View>
+                    </View>
+
+                    <View style={styles.CoursesDetails}>
+                        <Text style={styles.CourseNumber}>04</Text>
+                        <View style={styles.CourseTextContainer}>
+                            <Text style={styles.textSmall}>Chaptor Three</Text>
+                            <Text style={styles.textSmall2}>This is a course tha...</Text>
+                        </View>
+                        <View style={styles.play2}>
+                            <Image
+                                style={styles.icon}
+                                source={require('../assets/play-course.png')}
+                            />
+                        </View>
+                    </View>
+
+                </View>
+
+                <View>
+
+                    <TouchableOpacity style={styles.buttonContainer}>
+
+                        <View style={styles.cart}>
+                            <Image
+                                style={styles.icon2}
+                                source={require('../assets/cart.png')}
+                            />
+                        </View>
+
+                        <View style={styles.button}>
+                            <Text style={styles.buttontext2}>Buy Now</Text>
+                        </View>
+
+                    </TouchableOpacity>
+
                 </View>
 
             </View>
-            
+
 
 
             <StatusBar style="auto" />
@@ -84,18 +152,24 @@ const styles = StyleSheet.create({
     headerContainer: {
         backgroundColor: '#8A9AFC',
         width: '100%',
-        paddingTop: 80,
+        paddingTop: 60,
         paddingBottom: 40,
         padding: 30,
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
         flexDirection: 'column',
-        height: 450,
+        height: 500,
         borderBottomLeftRadius: 40,
         borderBottomRightRadius: 40,
+        position: 'relative',
+        overflow: 'hidden',
     },
     textSmall: {
+        fontSize: 20,
+        fontWeight: '600'
+    },
+    textSmall2: {
         fontSize: 18,
         fontWeight: '400'
     },
@@ -129,13 +203,22 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
-        borderRadius: 10,
+        borderRadius: 15,
+        position: 'relative',
+        zIndex: 20,
     },
     play: {
         width: 50,
         height: 50,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         backgroundColor: '#FFC561',
         borderRadius: 10,
+    },
+    play2: {
+        width: 50,
+        height: 50,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -170,8 +253,67 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     CourseNumber: {
-        fontSize: 48,
+        fontSize: 38,
         fontWeight: '700',
         color: '#BBC0D3',
+    },
+    headerimage: {
+        position: 'absolute',
+        bottom: 0,
+        left: 20,
+        right: 0,
+        width: '100%',
+        height: '80%',
+    },
+
+    // buttons
+
+    headerimage: {
+        position: 'absolute',
+        bottom: 0,
+        left: 30,
+        right: 0,
+        width: '100%',
+        height: '80%',
+    },
+    buttonContainer: {
+        width: '100%',
+        height: 60,
+        backgroundColor: '#F9F9FB',
+        padding: 5,
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+        borderRadius: 15,
+        position: 'relative',
+        zIndex: 20,
+        gap: 10,
+    },
+    cart: {
+        width: 50,
+        height: 50,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#FEEED4',
+        borderRadius: 50,
+    },
+    icon2: {
+        width: 20,
+        height: 20,
+    },
+    button: {
+        width: '80%',
+        height: '100%',
+        backgroundColor: '#19256F',
+        borderRadius: 10,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    buttontext2: {
+        fontSize: 18,
+        color: 'white',
     }
 });
